@@ -2594,7 +2594,7 @@ void output_data_csv(const uca_org_t & fin_res, string fn)
       file << "Precharge energy (nJ), ";
       file << "Row Cycle time (ns), ";
       file << "Transfer Latency (ns), ";
-      file << "Bus Frequency (MHz), ";
+      file << "Bus Frequency (MHz)";
 
 //      file << "Resistance per unit micron (ohm-micron), ";
 //      file << "Capacitance per unit micron (fF per micron), ";
@@ -2718,7 +2718,7 @@ void output_data_csv(const uca_org_t & fin_res, string fn)
     file << fin_res.data_array2->precharge_energy * 1e9 << ", ";
     file << fin_res.data_array2->t_RC * 1e9 << ", ";
     file << fin_res.data_array2->delay_TSV_tot * 1e9 << ", ";
-    file << g_ip->bus_freq << ", ";
+    file << g_ip->bus_freq;
 //    file << g_tp.wire_inside_mat.R_per_um << ", ";
 //    file << g_tp.wire_inside_mat.C_per_um / 1e-15 << ", ";
 //    file << g_tp.unit_len_wire_del / 1e-12 << ", ";
@@ -2785,7 +2785,6 @@ void output_UCA(uca_org_t *fr)
 		cout<<"	   t_RP (Row precharge latency): "<< fr->data_array2->t_RP* 1e9  << " ns" <<endl;
 		//cout<<"	   t_RRD (Rank to rank latency): "<< fr->data_array2->t_RRD* 1e9  << " ns" <<endl;
 		cout<<"	   t_RRD (Row activation to row activation delay): "<< fr->data_array2->t_RRD * 1e9 << " ns"<<endl;
-    cout << "  Final calculated access time (ns): " << fr->access_time*1e9 << " ns" << endl;
 
 		cout<<"Power Components:"<<endl;
 		cout<<"	   Activation energy: "<< fr->data_array2->activate_energy * 1e9  << " nJ" <<endl;
